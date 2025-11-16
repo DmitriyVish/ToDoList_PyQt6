@@ -34,7 +34,7 @@
 
 1.  **Клонируйте репозиторий:**
     ```bash
-    git clone <URL_ВАШЕГО_РЕПОЗИТОРИЯ>
+    git clone https://github.com/DmitriyVish/ToDoList_PyQt6.git
     cd ToDoList
     ```
 
@@ -56,3 +56,4 @@
 
 ```bash
 python main.py
+
