@@ -1,0 +1,97 @@
+/* Общий фон для главного окна */
+QMainWindow {
+    background-color: #9edaf6ff; /* Светло-голубой фон */
+    font-size: 14px;
+}
+
+/* Стили для кнопок */
+QPushButton, QCommandLinkButton {
+    /* Градиент: от более светлого к более тёмному */
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #B0D5E8, /* Верх: светлее */
+                               stop: 1 #80C1D6); /* Низ: темнее */
+    color: #2C3E50; /* Текст */
+    border: 1px solid #A3D3E0; /* Легкая граница */
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+/* При наведении - другой градиент */
+QPushButton:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #94C3D9, /* Верх: светлее */
+                               stop: 1 #66A9C4); /* Низ: темнее */
+    border-color: #80BBD1;
+}
+/* Для отключённой кнопки - серый градиент */
+QPushButton:disabled {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                               stop: 0 #D6E7F0, /* Верх: светлее */
+                               stop: 1 #C0DCE6); /* Низ: темнее */
+    color: #7F8C8D;
+    border-color: #BDC3C7;
+}
+
+/* Общий фон для диалоговых окон */
+QDialog {
+    background-color: #F0F8FF; /* Очень светлый голубой для диалогов */
+    font-size: 14px;
+}
+
+/* Стиль для конкретного QLabel с objectName "deadline_text" */
+QLabel#deadline_text {
+    background-color: #E6F7FF; /* Соответствует фону QMainWindow */
+    color: #2C3E50; /* Более тёплый тёмный цвет для текста */
+    border: 1px solid #D1E8F2; /* Легкая граница */
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+
+/* Стили для поля ввода */
+QLineEdit {
+    padding: 8px;
+    border: 1px solid #BDC3C7; /* Нейтральный серый */
+    border-radius: 6px;
+    background-color: #FFFFFF; /* Белый фон внутри */
+    color: #2C3E50; /* Текст */
+}
+QLineEdit:focus {
+    border-color: #80C1D6; /* Цвет границы при фокусе */
+    /* outline: none; */
+}
+
+/* Стили для заголовков таблицы */
+QHeaderView::section {
+    font-size: 14px;
+    font-weight: 500;
+    color: #2C3E50; /* Текст заголовка */
+    background-color: #D1E8F2; /* Мягкий фон заголовка */
+    padding: 6px;
+    border: 1px solid #A3D3E0; /* Граница ячейки заголовка */
+}
+
+/* Стили для таблицы */
+QTableWidget {
+    font-size: 12px;
+    color: #2C3E50; /* Цвет текста в ячейках */
+    background-color: #FFFFFF; /* Белый фон таблицы */
+    alternate-background-color: #F5FAFD; /* Альтернативный фон для строк */
+    border: 1px solid #BDC3C7; /* Граница самой таблицы */
+    border-radius: 4px; /* Скругление для таблицы */
+}
+
+/* Стили для виджета выбора даты */
+QDateEdit {
+    font-size: 14px;
+    color: #2C3E50;
+    height: 24px;
+    padding: 4px; /* Внутренние отступы */
+    border: 1px solid #BDC3C7;
+    border-radius: 6px;
+    background-color: #FFFFFF; /* Белый фон */
+}
+QDateEdit:focus {
+    border-color: #80C1D6; /* Цвет границы при фокусе */
+}
